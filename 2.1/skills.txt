@@ -6,4 +6,6 @@ O que eu vou aprender na Trybe:
 - HTML
 - CSS
 - JS
-- React
+- React- Internet
+- TCP/IP
+- HTTP
