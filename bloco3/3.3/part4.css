@@ -40,5 +40,24 @@ li em {
     background-color: pink;
 }
 
+ul li a:hover {
+    font-weight: bold;
+}
+
+#so:hover {
+    color: orange;
+}
+#w3s:hover {
+    color: green;
+}
+#mdn:hover {
+    color: black;
+}
+#dd:hover {
+    color: yellow;
+}
+#trybe:hover {
+    color: green;
+}
 
 
