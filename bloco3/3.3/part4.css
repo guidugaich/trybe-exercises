@@ -1,3 +1,17 @@
 ol {
     background-color: yellow;
+    text-transform: uppercase;
 }
+
+ol li:nth-child(even) {
+    color: green;
+}
+
+ol li:first-child,
+    li:nth-child(2n + 4),
+    li:nth-child(3n + 6),
+    li:nth-child(4n + 8)
+ {
+    text-transform: capitalize;
+}
+
