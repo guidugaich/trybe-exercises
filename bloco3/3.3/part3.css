@@ -13,3 +13,8 @@ ol:active {
 ul, ol {
     list-style: none;
 }
+
+div:hover {
+    border: 1px solid black;
+}
+
