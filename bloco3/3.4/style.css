@@ -1,0 +1,23 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+img {
+    width: 450px;
+}
+
+header {
+    text-align: center;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+header nav a{
+    padding: 100px;
+}
+
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
