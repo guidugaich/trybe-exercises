@@ -16,8 +16,18 @@ header nav a{
     padding: 100px;
 }
 
+main {
+    text-align: center;
+}
+
 table, td {
     border: 1px solid black;
     border-collapse: collapse;
+    margin: auto;
+}
+
+footer {
     text-align: center;
+    background-color: lightgreen;
+    padding: 20px; 
 }
