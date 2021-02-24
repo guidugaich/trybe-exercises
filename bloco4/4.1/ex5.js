@@ -1,5 +1,5 @@
 let ang1 = 60;
-let ang2 = 61;
+let ang2 = 60;
 let ang3 = 60;
 
 if (ang1 + ang2 + ang3 == 180) {
