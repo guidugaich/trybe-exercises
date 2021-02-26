@@ -1,4 +1,4 @@
-let n = 21;
+let n = 5;
 
 // definir altura da piramide em linhas
 let pyramidHeight = Math.ceil(n/2);
