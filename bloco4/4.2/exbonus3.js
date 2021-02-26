@@ -8,7 +8,9 @@ for (let index = 0; index < numbers.length; index += 1) {
         numbersMultiplied.push(numbers[index] * 2);
     } else {
         numbersMultiplied.push(numbers[index] * numbers[index + 1]);
-    }
-    console.log(numbersMultiplied);
+    }    
+    
 }
+
+console.log(numbersMultiplied);
 
