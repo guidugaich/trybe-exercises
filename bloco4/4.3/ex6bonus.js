@@ -9,4 +9,3 @@ for (let index = 2; index < n; index += 1) {
 }
 
 console.log(isPrime);
-
