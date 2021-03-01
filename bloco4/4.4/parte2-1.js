@@ -10,5 +10,3 @@ function isPalindrome(word) {
         return false;
     }
 }
-
-console.log(isPalindrome('oio'));
