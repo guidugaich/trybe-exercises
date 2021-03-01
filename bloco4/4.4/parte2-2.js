@@ -10,4 +10,4 @@ function returnLargestIntegerIndex(integers) {
     return largestIntegerIndex;
 }
 
-console.log(returnLargestIntegerIndex([2, 4, 6, 7, 10, 0, -3]));
+console.log(returnLargestIntegerIndex([2, 3, 6, 7, 10, 1]));
