@@ -37,6 +37,29 @@
     document.getElementById('elementoOndeVoceEsta').nextSibling.nextSibling;
     //8. Agora acesse o terceiroFilho a partir de pai
     document.getElementById('pai').lastElementChild.previousElementSibling;
+
+    //Parte 2 - Criando elementos
+    //1. Crie um irmão para elementoOndeVoceEsta
+    const newSiblingElement = document.createElement('span');
+    document.getElementById('elementoOndeVoceEsta').parentNode.appendChild(newSiblingElement);
+    newSiblingElement.innerText = 'blablabla';
+    //2. Crie um filho para elementoOndeVoceEsta
+    const newChildElement = document.createElement('span');
+    document.getElementById('elementoOndeVoceEsta').appendChild(newChildElement);
+    newChildElement.innerText = 'This is a child node';
+    //3. Crie um filho para primeiroFilhoDoFilho
+    const newGrandChildrenElement = document.createElement('span');
+    document.getElementById('primeiroFilhoDoFilho').appendChild(newGrandChildrenElement);
+    newGrandChildrenElement.innerText = 'this is a child of child node';
+    newGrandChildrenElement.id = 'grandChildren'
+    //4. A partir desse filho criado, acesse terceiroFilho .
+    document.getElementById('grandChildren').parentNode.parentNode.nextElementSibling;
+
+    //Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+    const elementsToRemove = document.querySelectorAll('span, #primeiroFilho, #segundoEUltimoFilhoDoFilho');
+    for (let element of elementsToRemove) {
+        element.parentNode.removeChild(element);
+    }
   </script>
 </body>
 </html>
