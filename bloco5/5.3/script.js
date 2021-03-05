@@ -62,3 +62,14 @@ function createDaysOfTheWeek() {
   }
 
   addClickEventToHolidayBtn();
+
+  //Exercicio 4
+  function fridayBtnGenerator(btnString) {
+    let btn = document.createElement('button');
+    btn.id = 'btn-friday';
+    btn.innerText = btnString;
+    document.querySelector('.buttons-container').appendChild(btn);
+}
+
+fridayBtnGenerator("Sexta-Feira");
+
