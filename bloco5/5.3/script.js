@@ -45,3 +45,20 @@ function createDaysOfTheWeek() {
   }
 
   holidayBtnGenerator("Feriados");
+
+  // Exercicio 3
+  function addClickEventToHolidayBtn() {
+      const btn = document.getElementById('btn-holiday');
+      btn.addEventListener('click', function () {
+          for (let i of document.querySelectorAll('.holiday')) {
+              let currentColor = i.style.backgroundColor;
+              if (currentColor !== 'lightgreen') {
+                  i.style.backgroundColor = 'lightgreen';
+              } else {
+                i.style.backgroundColor = 'rgb(238, 238, 238)';
+              }
+          }
+      });
+  }
+
+  addClickEventToHolidayBtn();
