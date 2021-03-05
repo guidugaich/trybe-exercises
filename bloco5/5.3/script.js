@@ -35,3 +35,13 @@ function createDaysOfTheWeek() {
      
       document.getElementById('days').appendChild(dayElement);
   }
+
+  // Exercicio 2
+  function holidayBtnGenerator(btnString) {
+      let btn = document.createElement('button');
+      btn.id = 'btn-holiday';
+      btn.innerText = btnString;
+      document.querySelector('.buttons-container').appendChild(btn);
+  }
+
+  holidayBtnGenerator("Feriados");
