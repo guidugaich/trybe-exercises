@@ -95,13 +95,13 @@ addClickEventToFridayBtn();
 
 // Exercicio 6
 function enlarge(evt) {
-    evt.target.style.fontSize = '1.5em';
-    evt.target.style.fontWeigth = 'bold';
+    evt.target.style.fontSize = '1.8em';
+    evt.target.style.fontWeigth = '1.8em';
 }
 
 function backToNormal(evt) {
     evt.target.style.fontSize = '1em';
-    evt.target.style.fontSize = 'regular'
+    evt.target.style.fontWeight = '1em'
 }
 
 let ulDays = document.getElementById('days').childNodes;
@@ -111,5 +111,14 @@ for (let liElement of ulDays) {
     liElement.addEventListener('mouseover', enlarge, false);
     liElement.addEventListener('mouseleave', backToNormal, false);
 }
+
+// Exercicio 7
+function addTask(taskString) {
+    let task = document.createElement('span');
+    task.innerText = taskString;
+    document.getElementsByClassName('my-tasks')[0].appendChild(task);
+}
+
+addTask('Cozinhar');
 
 
