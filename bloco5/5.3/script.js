@@ -92,3 +92,24 @@ function addClickEventToFridayBtn() {
 }
 
 addClickEventToFridayBtn();
+
+// Exercicio 6
+function enlarge(evt) {
+    evt.target.style.fontSize = '1.5em';
+    evt.target.style.fontWeigth = 'bold';
+}
+
+function backToNormal(evt) {
+    evt.target.style.fontSize = '1em';
+    evt.target.style.fontSize = 'regular'
+}
+
+let ulDays = document.getElementById('days').childNodes;
+  
+  
+for (let liElement of ulDays) {
+    liElement.addEventListener('mouseover', enlarge, false);
+    liElement.addEventListener('mouseleave', backToNormal, false);
+}
+
+
