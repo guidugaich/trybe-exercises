@@ -121,6 +121,7 @@ function addTask(taskString) {
 
 addTask('Cozinhar');
 
+
 // Exercicio 8
 function addTaskSelector (colorString) {
     let newDiv = document.createElement('div');
@@ -137,10 +138,36 @@ function addTaskClassOnClick() {
     taskDiv.addEventListener('click', function () {
         if (taskDiv.className === 'task') {
             taskDiv.classList.add('selected');
+            taskDiv.innerText = 'S';
+            taskDiv.style.color = 'white';
+            taskDiv.style.textAlign = 'center';
+            taskDiv.style.verticalAlign = 'middle';
+            taskDiv.style.lineHeight = '35px';
         } else {
             taskDiv.classList.remove('selected');
+            taskDiv.innerText = '';
         }
     }); 
 }
 
 addTaskClassOnClick();
+
+// Exercicio 10
+function setDayColor() {
+    let selectedTask = document.getElementsByClassName('task selected');
+    let days = document.querySelector('#days');
+    let taskDiv = document.querySelector('.task');
+    let taskColor = taskDiv.style.backgroundColor;
+    
+    days.addEventListener('click', function(event){
+      let eventTargetColor = event.target.style.color;
+      if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+        let color = selectedTask[0].style.backgroundColor;
+        event.target.style.color = color;
+      } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+    });
+  };
+  
+  setDayColor();
