@@ -121,4 +121,26 @@ function addTask(taskString) {
 
 addTask('Cozinhar');
 
+// Exercicio 8
+function addTaskSelector (colorString) {
+    let newDiv = document.createElement('div');
+    newDiv.className = 'task';
+    newDiv.style.backgroundColor = colorString;
+    document.getElementsByClassName('my-tasks')[0].appendChild(newDiv);
+}
 
+addTaskSelector('green');
+
+// Exercicio 9
+function addTaskClassOnClick() {
+    let taskDiv = document.querySelector('.task');
+    taskDiv.addEventListener('click', function () {
+        if (taskDiv.className === 'task') {
+            taskDiv.classList.add('selected');
+        } else {
+            taskDiv.classList.remove('selected');
+        }
+    }); 
+}
+
+addTaskClassOnClick();
