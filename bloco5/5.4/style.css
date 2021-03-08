@@ -1,0 +1,12 @@
+.texto {
+    width: 60%;
+    /* display: inline-block; */
+    float: left;
+}
+
+.style-picker {
+    width: 40%;
+    /* display: inline-block; */
+    float: right;
+    text-align: center;
+}
