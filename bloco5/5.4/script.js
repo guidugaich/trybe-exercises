@@ -1,4 +1,5 @@
 window.onload = function () {
+    
     let text = document.querySelector('.texto');
     let bgColorBtn = document.getElementById('bg-color-btn');
     let textColorBtn = document.getElementById('text-color-btn');
@@ -6,7 +7,14 @@ window.onload = function () {
     let lineHeightBtn = document.getElementById('line-height-btn');
     let fontFamilyBtn = document.getElementById('font-family-btn');
 
-    
+    if (localStorage.length !== 0) {
+        text.style.backgroundColor = localStorage['bg-color'];
+        text.style.color = localStorage['text-color'];
+        text.style.fontSize = localStorage['font-size'];
+        text.style.lineHeight = localStorage['line-height'];
+        text.style.fontFamily = localStorage['font-family'];
+    }
+
     bgColorBtn.addEventListener('click', function () {
         let bgColor = document.getElementById('bg-color').value;
         text.style.backgroundColor = bgColor;
@@ -36,4 +44,5 @@ window.onload = function () {
         text.style.fontFamily = fontFamily;
         localStorage.setItem('font-family', fontFamily);
     });
+
 }
