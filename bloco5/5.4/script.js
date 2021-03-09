@@ -45,4 +45,10 @@ window.onload = function () {
         localStorage.setItem('font-family', fontFamily);
     });
 
+    let resetBtn = document.querySelector('#reset-button');
+    resetBtn.addEventListener('click', function () {
+        localStorage.clear();
+        document.location.reload();
+    })
+
 }
