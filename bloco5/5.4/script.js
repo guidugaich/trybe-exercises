@@ -1,19 +1,34 @@
 window.onload = function () {
-    let paragraphs = document.querySelectorAll('.texto p');
+    let text = document.querySelector('.texto');
     let bgColorBtn = document.getElementById('bg-color-btn');
     let textColorBtn = document.getElementById('text-color-btn');
+    let fontSizeBtn = document.getElementById('font-size-btn');
+    let lineHeightBtn = document.getElementById('line-height-btn');
+    let fontFamilyBtn = document.getElementById('font-family-btn');
+
     
     bgColorBtn.addEventListener('click', function () {
-        for (let paragraph of paragraphs) {
-            let bgColor = document.getElementById('bg-color').value;
-            paragraph.style.backgroundColor = bgColor;
-        }
+        let bgColor = document.getElementById('bg-color').value;
+        text.style.backgroundColor = bgColor;
     });
 
     textColorBtn.addEventListener('click', function () {
-        for (let paragraph of paragraphs) {
-            let textColor = document.getElementById('text-color').value;
-            paragraph.style.color = textColor;
-        }
+        let textColor = document.getElementById('text-color').value;
+        text.style.color = textColor;
+    });
+
+    fontSizeBtn.addEventListener('click', function () {
+        let fontSize = document.getElementById('font-size').value;
+        text.style.fontSize = fontSize;
+    });
+
+    lineHeightBtn.addEventListener('click', function () {
+        let lineHeight = document.getElementById('line-height').value;
+        text.style.lineHeight = lineHeight;
+    });
+
+    fontFamilyBtn.addEventListener('click', function () {
+        let fontFamily = document.getElementById('font-family').value;
+        text.style.fontFamily = fontFamily;
     });
 }
