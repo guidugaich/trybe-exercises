@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Style Picker</title>
+    <link rel="stylesheet" href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <main>
+        <h1>Texto Aleatório</h1>
+        <section class='texto'>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum purus enim, tempus at erat eu, eleifend auctor eros. Cras augue nisi, aliquam sit amet malesuada non, feugiat quis dolor. Mauris pharetra, ligula id porttitor imperdiet, purus velit laoreet tortor, nec dignissim lectus nibh sit amet lacus. Vivamus tincidunt molestie neque, sed egestas lorem porttitor eu. Aenean imperdiet dapibus nisl, et luctus nulla venenatis eget. Suspendisse eget tincidunt ante. Nullam quis aliquam mauris. Proin nec leo nibh. In quis ornare est, a consequat turpis. Donec dui tortor, tempus non turpis in, finibus posuere ligula. Morbi in sem eleifend lectus tristique dignissim. Donec at eros suscipit quam varius semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis interdum sem, sed molestie ante luctus a. Maecenas id maximus erat, sit amet tempus diam.
+            </p>
+            <p>
+                Aenean massa dolor, vehicula eget libero in, mattis dapibus leo. In elementum metus metus, eu consequat lacus pellentesque eu. Ut interdum, quam sed ornare ullamcorper, leo elit finibus justo, eget volutpat dui justo non augue. Fusce posuere ullamcorper lectus, ac mollis diam pretium vitae. Quisque cursus gravida felis, sed commodo ex maximus quis. Cras nec elit pretium, pharetra nisl non, congue dui. Cras enim velit, suscipit at mauris quis, lacinia viverra leo. Cras sollicitudin, diam in euismod convallis, justo ante mattis augue, sit amet iaculis orci tellus at dui. Proin pretium sodales velit sit amet dictum. Sed suscipit at urna et euismod.
+            </p>
+            <p>
+                Suspendisse tincidunt, tortor vel hendrerit euismod, arcu nulla dictum odio, id consequat nunc mi at lorem. Cras consequat porttitor metus vel finibus. Cras sapien metus, rhoncus non mi sit amet, cursus ultrices ante. Duis et sem luctus, aliquet augue id, viverra nunc. Quisque at nunc vel neque congue hendrerit. Suspendisse eu consequat est. Phasellus id dolor sit amet sapien maximus venenatis a vel ipsum. Ut tempus mauris vel dignissim tincidunt. Curabitur imperdiet dapibus nunc, eget posuere augue sollicitudin in. Curabitur facilisis nisi sit amet eros sagittis, a tristique dui volutpat. Cras id fringilla quam, a iaculis arcu. Maecenas ut semper ante, nec placerat metus.
+            </p>
+            <p>
+                Phasellus in mi laoreet enim varius euismod vulputate eu sapien. Quisque leo massa, luctus id rutrum et, condimentum et lacus. Etiam rutrum lectus sit amet feugiat placerat. Aenean a est augue. Etiam non mauris ultrices sapien consequat condimentum sed id orci. Etiam finibus pulvinar commodo. In nec elementum lorem. Duis maximus scelerisque ligula eget posuere. Fusce tincidunt imperdiet quam, ut volutpat augue egestas quis. Curabitur non aliquam lacus, ac ornare felis. Proin congue gravida ante, nec viverra erat dignissim in. Vivamus luctus nisl ut lacus egestas fermentum. Cras fringilla felis neque, nec vehicula tellus tristique quis. Phasellus arcu orci, elementum eget vulputate ut, tincidunt sed lorem.
+            </p>
+        </section>
+        <aside class='style-picker'>
+            <div class='background-color'>
+                <label for="bg-color">Background Color:</label><br>
+                <input type="text" id="bg-color">
+                <button id='bg-color-btn'>Change</button>
+            </div>
+            <div class='text-color'>
+                <label for="text-color">Text Color:</label><br>
+                <input type="text" id="text-color">
+                <button id='text-color-btn'>Change</button>
+            </div>
+            <div class='font-size'>
+                <label for="font-size">Font Size:</label><br>
+                <input type="text" id="font-size">
+                <button id='font-size-btn'>Change</button>
+            </div>
+            <div class='line-height'>
+                <label for="line-height">Line Height:</label><br>
+                <input type="text" id="line-height">
+                <button id='line-height-btn'>Change</button>
+            </div>
+            <div class='font-family'>
+                <label for="font-family">Font Family:</label><br>
+                <input type="text" id="font-family">
+                <button id='font-family-btn'>Change</button>
+            </div>
+            <button id='reset-button'>Reset to deafult</button>
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.texto {
+    width: 60%;
+    /* display: inline-block; */
+    float: left;
+}
+
+.style-picker {
+    width: 40%;
+    /* display: inline-block; */
+    float: right;
+    text-align: center;
+}
+
+.style-picker {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#reset-button {
+    width: 50%;
+    margin: auto;
+    background-color: red;
+    color: white;
+}
