@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for='nome'>Nome
+        <input type='text' maxlength="40" required id='nome'>
+      </label>
+      <br><br>
+      <label for='nome'>Email
+        <input type='email' maxlength="50" required id='email'>
+      </label> 
+      <br><br>
+      <label for='cpf'>CPF
+        <input type='text' maxlength="11" required id='cpf'>
+      </label>
+      <br><br>
+      <label for='address'>Endereço
+        <input type='text' maxlength="200" required id='address'>
+      </label>
+      <br><br>
+      <label for='city'>Cidade
+        <input type='text' maxlength="28" required id='city'>
+      </label>
+      <br><br>
+      <label for='state'>Estado
+        <select name='state' id='state'>
+        </select>
+      </label>
+      <br><br>
+      <label for='casa'>
+        <input type='radio' required name='residence-type' id='casa' value='casa'>Casa
+      </label>
+      <label for='apto'>
+        <input type='radio' required name='residence-type' id='apto' value='apto'>Apartamento
+      </label>
+    </fieldset>
+    <br><br>
+    <fieldset>
+      <legend>Dados de emprego</legend>
+      <label for="abstract">Resumo<br>
+        <textarea name="resume" maxlength="1000" rows='10' cols='30'required placeholder="Resumo do currículo" id='abstract'></textarea>
+      </label>
+      <br><br>
+      <label for='cargo'> Último cargo
+        <input id='cargo' maxlength="40" required placeholder="Cargo">
+      </label>
+      <br><br>
+      <label for='descricao-cargo'>Descrição do cargo
+        <input id='descricao-cargo' maxlength="500" required placeholder="Descrição do Cargo">
+      </label>
+      <br><br>
+      <label for='data-inicio'>Data de Início
+        <input id='data-inicio' required placeholder="dd/mm/aaaa">
+      </label>
+    </fieldset>
+    <br><br>
+    <button type='submit' id='submit-btn'>Submit</button>
+  </form>
+  <div id='resume'>
+
+  </div>
+</body>
+<script src='script.js'></script>
+</html>
