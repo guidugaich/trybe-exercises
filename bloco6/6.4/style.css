@@ -17,11 +17,14 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
+  order: 1;
 }
 
 .menu-container {
   display: flex;
   flex-basis: 500px;
+  order: 2;
+  flex-grow: 1;
 }
 
 .logo-container {
@@ -40,4 +43,5 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+  align-self: center;
 }
