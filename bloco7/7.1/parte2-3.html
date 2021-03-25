@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>Butão</button>
+  <p>clicks no butão: <span id='clickcount'></span></p>
+  <script>
+    const butao = document.getElementsByTagName('button')[0];
+    const clickCountDisplay = document.getElementById('clickcount');
+    let clickCount = 0;
+    butao.addEventListener('click', () => {
+      clickCount += 1;
+      clickCountDisplay.innerText = clickCount;
+    })
+  </script>
+</body>
+</html>
