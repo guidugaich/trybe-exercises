@@ -1,10 +1,26 @@
 const assert = require('assert');
-// escreva a função wordLengths aqui
-const wordLengths = (words) => words.map((i) => i.length);
 
-const words = ['sun', 'potato', 'roundabout', 'pizza'];
-const expected = [3, 6, 10, 5];
+function myRemove(arr, item) {
+  let newArr = [];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (item !== arr[index]) {
+      newArr.push(arr[index]);
+    }
+  }
+  return newArr;
+}
 
-assert.strictEqual(typeof wordLengths, 'function');
-const output = wordLengths(words);
-assert.deepStrictEqual(output, expected);
+// implemente seus testes aqui
+// Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
+
+// Verifique se a chamada myRemove([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
+assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+
+// Verifique se o array passado por parâmetro não sofreu alterações
+const myArray = [2, 4, 7, 9];
+myRemove(myArray, 7);
+assert.deepStrictEqual(myArray, [2, 4, 7, 9]);
+
+// Verifique se a chamada myRemove([1, 2, 3, 4], 5) retorna o array esperado
+assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
