@@ -1,4 +1,7 @@
-const gabarito = (respostaCerta) => respostaUsuario = (respostaUsuario) => respostaCerta === respostaUsuario;
+const gabarito = (respostaCerta) => respostaUsuario = (respostaUsuario) => {
+  return respostaCerta.toLowerCase() === respostaUsuario.toLowerCase();
+}
+  
 
-const respUser = gabarito('123');
-console.log(respUser('123'));
+const respUser = gabarito('AAA');
+console.log(respUser('aaa'));
