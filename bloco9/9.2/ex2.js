@@ -8,11 +8,13 @@ const promise = new Promise((resolve, reject) => {
   randomArraySquaredSum = randomArray.map((n) => n ** 2).reduce((a, b) => a + b);
 
   if (randomArraySquaredSum < 8000) {
-    return resolve(randomArraySquaredSum);
+    divisorArray = [2, 3, 5, 10];
+    return resolve(divisorArray.map((divisor) => randomArraySquaredSum / divisor));
   } 
   reject(randomArraySquaredSum);
 })
 
 promise
-  .then(number => console.log(`nice number: ${number}`))
-  .catch(number => console.log(`bullshit: ${number}`));
+  .then(array => array.reduce((a, b) => a + b))
+  .then(sum => console.log(sum))
+  .catch(number => console.log(`É mais de oito mil! Essa promise deve estar quebrada!`));
