@@ -6,7 +6,13 @@ const fetchJoke = () => {
     headers: { 'Accept': 'application/json' }
   };
 
-  fetch(apiurl, optionsObject);
+  fetch(apiurl, optionsObject)
+    .then(response => response.json())
+    .then(data => {
+      const jokeText = document.createElement('p');
+      jokeText.innerText = data.joke;
+      document.getElementById('jokeContainer').appendChild(jokeText);
+    })
 };
 
 window.onload = () => fetchJoke();
