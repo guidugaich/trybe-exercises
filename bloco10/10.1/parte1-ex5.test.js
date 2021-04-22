@@ -1,4 +1,3 @@
-const { TestScheduler } = require('@jest/core');
 const objects = require('./parte1-ex5.js');
 
 const obj1 = objects.obj1;
