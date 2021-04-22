@@ -7,5 +7,4 @@ test('verifica a funcao myRemoveWithoutCopy', () => {
   myRemoveWithoutCopy(myArray, 3);
   expect(myArray).toEqual([1, 2, 4]);
   expect(myRemoveWithoutCopy([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
-
 })
