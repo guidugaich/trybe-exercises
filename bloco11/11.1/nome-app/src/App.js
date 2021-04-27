@@ -1,4 +1,5 @@
 import './App.css';
+import ListTitle from './components/ListTitle'
 
 const task = (value) => {
   return (
@@ -6,11 +7,19 @@ const task = (value) => {
   );
 };
 
-const tasks = ['limpar', 'lavar', 'cozinhar'];
+const tasks = ['limpar', 
+               'lavar', 
+               'cozinhar', 
+               'estudar', 
+               'dormir', 
+               'jogar'];
 
 function App() {
   return (
-    <h1>{tasks.map(t => task(t))}</h1>
+    <div>
+      <ListTitle title={'Lista de tarefas'}/>
+      <h1>{tasks.map(t => task(t))}</h1>
+    </div>
   );
 }
 
