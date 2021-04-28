@@ -4,6 +4,11 @@
   width: 20vw;
   min-width: 220px;
   display: flex;
+  margin: 5px;
+}
+
+.pokemon:hover {
+  background-color: lightblue;
 }
 
 .pokeinfo {

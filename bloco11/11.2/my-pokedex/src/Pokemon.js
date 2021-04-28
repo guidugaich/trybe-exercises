@@ -9,7 +9,11 @@ function Pokemon(props) {
         <p>{props.pokemon.type}</p>
         <p>Weight: {props.pokemon.averageWeight.value}</p>
       </div>
-      <img src={props.pokemon.image} className='pokeimg'></img>
+      <img
+        src={props.pokemon.image} 
+        className='pokeimg'
+        alt='Foto do pokemon'
+      />
     </div>
   )
 }

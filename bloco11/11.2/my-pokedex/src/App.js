@@ -1,10 +1,13 @@
 import './App.css';
-import Pokemon from './Pokemon'
+import Pokedex from './Pokedex'
 import pokemons from './data'
 
 function App() {
   return (
-    <Pokemon pokemon={pokemons[6]} />
+    <div>
+      <h1>Pokedex</h1>
+      <Pokedex pokelist={pokemons}/>
+    </div>
   )}
 
 export default App;
