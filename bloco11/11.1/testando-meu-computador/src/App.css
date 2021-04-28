@@ -1,0 +1,10 @@
+body {
+  background-color: gray;
+}
+
+button {
+  width: 400px;
+  height: 200px;
+  margin: 50% 50%;
+  font-size: large;
+}

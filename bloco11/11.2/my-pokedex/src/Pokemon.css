@@ -1,0 +1,23 @@
+.pokemon {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 20vw;
+  min-width: 220px;
+  display: flex;
+  margin: 5px;
+}
+
+.pokemon:hover {
+  background-color: lightblue;
+}
+
+.pokeinfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.pokeimg {
+  width: 50%;
+}
