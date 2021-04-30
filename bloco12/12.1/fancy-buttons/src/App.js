@@ -5,24 +5,28 @@ import React from 'react';
 class App extends React.Component {
   constructor() {
     super();
-    this.handleClick = this.handleClick.bind(this);
     this.state = {
-      nClicks: 0
+      btn1: 0,
+      btn2: 0,
+      btn3: 0
     }
+    console.log(this.props)
   }
 
-  handleClick() {
-    console.log('Cricou danado');
+  handleClick = (evt) => {
+    console.log(`Cricou no ${evt.target.name}`);
     console.log(this.state);
     this.setState((prevState, _props) => ({
-      nClicks: prevState.nClicks + 1
+      [evt.target.name]: prevState[evt.target.name] + 1
     }));
   };
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick} className='fancyButton'>{this.state.nClicks}</button>
+        <button onClick={this.handleClick} className='fancyButton' name='btn1'>{this.state.btn1}</button>
+        <button onClick={this.handleClick} className='fancyButton' name='btn2'>{this.state.btn2}</button>
+        <button onClick={this.handleClick} className='fancyButton' name='btn3'>{this.state.btn3}</button>
       </div>
     );
   }
