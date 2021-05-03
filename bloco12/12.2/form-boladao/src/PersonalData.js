@@ -1,5 +1,6 @@
 import React from 'react';
 import './PersonalData.css';
+import states from './estadosBrasil'
 
 class PersonalData extends React.Component {
   render() {
@@ -53,12 +54,14 @@ class PersonalData extends React.Component {
         </label>
 
         <label>Estado
-          <input 
+          <select 
             type="text" 
             name="estado"
             onChange={handleChange}
             value={estado}
-          />
+          >
+            {states.map((obj) => <option>{Object.keys(obj)}</option>)}
+          </select>
         </label>
 
         <label>Tipo
