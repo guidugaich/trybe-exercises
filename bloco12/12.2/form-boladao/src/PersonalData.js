@@ -60,7 +60,7 @@ class PersonalData extends React.Component {
             onChange={handleChange}
             value={estado}
           >
-            {states.map((obj) => <option>{Object.keys(obj)}</option>)}
+            {states.map((obj) => <option key={Object.keys(obj)}>{Object.keys(obj)}</option>)}
           </select>
         </label>
 
