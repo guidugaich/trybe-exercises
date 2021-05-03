@@ -26,10 +26,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <PersonalData />
+      <form>
+        <PersonalData 
+          handleChange={this.handleChange} 
+          nome={this.state.nome}
+          email={this.state.email}
+          cpf={this.state.cpf}
+          endereco={this.state.endereco}
+          cidade={this.state.cidade}
+          estado={this.state.estado}
+          tipo={this.state.tipo}
+        />
         <WorkData />
-      </div>
+      </form>
     );
   }
 }

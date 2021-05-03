@@ -4,7 +4,7 @@ import './WorkData.css';
 class WorkData extends React.Component {
   render() {
     return (
-      <fieldset>
+      <fieldset className="work-data">
         <label>Resumo do currículo
           <input type="textarea" />
         </label>
