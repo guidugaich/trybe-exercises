@@ -8,12 +8,14 @@ class PersonalData extends React.Component {
 
     return (
       <fieldset className="personal-data">
+        <legend>Dados Pessoais</legend>
         <label>Nome
           <input 
             type="text" 
             name="nome" 
             onChange={handleChange}
             value={nome}
+            required
           />
         </label>
 
@@ -64,14 +66,27 @@ class PersonalData extends React.Component {
           </select>
         </label>
 
-        <label>Tipo
-          <input 
-            type="text" 
-            name="tipo"
-            onChange={handleChange}
-            value={tipo}
-          />
-        </label>
+        <div>Tipo da moradia<br></br>
+          <label>
+            <input 
+              type="radio" 
+              name="tipo"
+              onChange={handleChange}
+              value='casa'
+            />
+            Casa
+          </label>
+
+          <label>
+            <input 
+              type="radio" 
+              name="tipo"
+              onChange={handleChange}
+              value='ape'
+            />
+            Apartamento
+          </label>
+        </div>
       </fieldset>
     )
   }
