@@ -72,7 +72,7 @@ class PersonalData extends React.Component {
               type="radio" 
               name="tipo"
               onChange={handleChange}
-              value='casa'
+              value='Casa'
             />
             Casa
           </label>
@@ -82,7 +82,7 @@ class PersonalData extends React.Component {
               type="radio" 
               name="tipo"
               onChange={handleChange}
-              value='ape'
+              value='Apartamento'
             />
             Apartamento
           </label>
