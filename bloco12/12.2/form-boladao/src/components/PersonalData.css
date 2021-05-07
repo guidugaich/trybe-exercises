@@ -1,0 +1,9 @@
+.personal-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.personal-data label {
+  margin: 10px 0px;
+}

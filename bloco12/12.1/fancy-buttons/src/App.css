@@ -1,0 +1,8 @@
+.fancyButton {
+  background-color: purple;
+  margin: 10px 30px;
+  height: 150px;
+  width: 150px;
+  color: white;
+  font-size: 50px;
+}
