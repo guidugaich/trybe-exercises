@@ -1,6 +1,6 @@
 import React from 'react';
 import './PersonalData.css';
-import states from './estadosBrasil'
+import states from '../estadosBrasil'
 
 class PersonalData extends React.Component {
   render() {

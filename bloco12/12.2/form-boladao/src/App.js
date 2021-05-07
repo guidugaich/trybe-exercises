@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import PersonalData from './PersonalData'
-import WorkData from './WorkData'
-import CVRenderer from './CVRenderer'
+import PersonalData from './components/PersonalData'
+import WorkData from './components/WorkData'
+import CVRenderer from './components/CVRenderer'
 
 class App extends React.Component {
   constructor() {
@@ -44,7 +44,9 @@ class App extends React.Component {
           cargo={this.state.cargo}
           descricaoCargo={this.state.descricaoCargo}
         />
-        <CVRenderer />
+        <CVRenderer
+          data={this.state}
+        />
       </form>
     );
   }
