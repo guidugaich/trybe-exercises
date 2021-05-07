@@ -4,7 +4,7 @@ import states from './estadosBrasil'
 
 class PersonalData extends React.Component {
   render() {
-  const { nome, email, cpf, endereco, cidade, estado, tipo, handleChange } = this.props; 
+  const { nome, email, cpf, endereco, cidade, estado, handleChange } = this.props; 
 
     return (
       <fieldset className="personal-data">
