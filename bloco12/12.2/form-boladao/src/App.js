@@ -17,8 +17,18 @@ class App extends React.Component {
       tipo: '',
       cv: '',
       cargo: '',
-      descricaoCargo: ''
+      descricaoCargo: '',
+      cvDisplay: {display: 'none'}
     };
+  }
+
+  switchCVDisplay = async () => {
+    if (Object.values(this.state.cvDisplay)[0] == 'none') {
+      await this.setState({cvDisplay: {display: 'block'}})
+    } else {
+      await this.setState({cvDisplay: {display: 'none'}})
+    }
+    
   }
 
   handleChange = (event) => {
@@ -46,6 +56,7 @@ class App extends React.Component {
         />
         <CVRenderer
           data={this.state}
+          onRenderBtnClick={this.switchCVDisplay}
         />
       </form>
     );

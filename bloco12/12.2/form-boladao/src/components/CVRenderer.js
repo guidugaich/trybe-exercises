@@ -2,20 +2,6 @@ import React from 'react'
 import './CVRenderer.css'
 
 class CVRenderer extends React.Component {
-  constructor() {
-    super()
-    this.state = {cvDisplay: 'none'}
-  }
-  
-  switchDisplayCV = () => {
-    const { cvDisplay } = this.state;
-    if (cvDisplay === 'none') {
-      this.setState({cvDisplay: 'block'})
-    } else {
-      this.setState({cvDisplay: 'none'})
-    }
-  }
-
   render() {
     const { nome,
             email, 
@@ -26,16 +12,15 @@ class CVRenderer extends React.Component {
             tipo, 
             cv, 
             cargo, 
-            descricaoCargo } = this.props.data;
-
-    
+            descricaoCargo,
+            cvDisplay } = this.props.data;
 
     return (
       <div className="cvComponent">
-        <button onClick={this.switchDisplayCV}>Criar CV</button>
+        <button onClick={this.props.onRenderBtnClick}>Criar CV</button>
         <div
           className="cv"
-          style={{display: this.state.cvDisplay}}
+          style={cvDisplay}
         >
           <h1>{nome}</h1>
           <div className="personalData">
