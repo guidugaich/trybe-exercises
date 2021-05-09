@@ -18,47 +18,44 @@ class App extends React.Component {
       cv: '',
       cargo: '',
       descricaoCargo: '',
-      cvDisplay: {display: 'none'}
+      displayCV: false
     };
-  }
-
-  switchCVDisplay = async () => {
-    if (Object.values(this.state.cvDisplay)[0] == 'none') {
-      await this.setState({cvDisplay: {display: 'block'}})
-    } else {
-      await this.setState({cvDisplay: {display: 'none'}})
-    }
-    
   }
 
   handleChange = (event) => {
     this.setState({[event.target.name]: event.target.value});
   }
 
+  toggleDisplayCv = async () => {
+    await this.setState((prevState) => ({displayCV: !prevState.displayCV}))
+    console.log(this.state.displayCV)
+  }
+
+
   render() {
     return (
-      <form>
-        <PersonalData 
-          handleChange={this.handleChange} 
-          nome={this.state.nome}
-          email={this.state.email}
-          cpf={this.state.cpf}
-          endereco={this.state.endereco}
-          cidade={this.state.cidade}
-          estado={this.state.estado}
-          tipo={this.state.tipo}
-        />
-        <WorkData
-          handleChange={this.handleChange}
-          cv={this.state.cv}
-          cargo={this.state.cargo}
-          descricaoCargo={this.state.descricaoCargo}
-        />
-        <CVRenderer
-          data={this.state}
-          onRenderBtnClick={this.switchCVDisplay}
-        />
-      </form>
+      <div>
+        <form>
+          <PersonalData 
+            handleChange={this.handleChange} 
+            nome={this.state.nome}
+            email={this.state.email}
+            cpf={this.state.cpf}
+            endereco={this.state.endereco}
+            cidade={this.state.cidade}
+            estado={this.state.estado}
+            tipo={this.state.tipo}
+          />
+          <WorkData
+            handleChange={this.handleChange}
+            cv={this.state.cv}
+            cargo={this.state.cargo}
+            descricaoCargo={this.state.descricaoCargo}
+          />
+        </form>
+        <button onClick={this.toggleDisplayCv}>Criar CV</button>
+        {this.state.displayCV ? <CVRenderer data={this.state} /> : null}         
+      </div>
     );
   }
 }

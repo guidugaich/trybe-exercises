@@ -12,16 +12,11 @@ class CVRenderer extends React.Component {
             tipo, 
             cv, 
             cargo, 
-            descricaoCargo,
-            cvDisplay } = this.props.data;
+            descricaoCargo } = this.props.data;
 
     return (
       <div className="cvComponent">
-        <button onClick={this.props.onRenderBtnClick}>Criar CV</button>
-        <div
-          className="cv"
-          style={cvDisplay}
-        >
+        <div className="cv">
           <h1>{nome}</h1>
           <div className="personalData">
             <span>{email}</span>
