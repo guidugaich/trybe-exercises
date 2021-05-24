@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, getByAltText, render } from '@testing-library/react';
 import App from './App';
 
 describe('Teste da aplicação toda', () => {
@@ -20,7 +20,7 @@ describe('Teste da aplicação toda', () => {
   });
 
   it('tests the search button', async () => {
-    const { getByTestId, findByText } = render(<App />);
+    const { getByTestId, findByText, getByAltText } = render(<App />);
 
     const digimon = [{
       img: "https://digimon.shadowsmith.com/img/ogremon.jpg",
@@ -44,7 +44,8 @@ describe('Teste da aplicação toda', () => {
     fireEvent.click(button)
 
     await findByText('level: Champion');
-    console.log(getByTestId('digimonName'));
+    expect(getByTestId('digimonName')).toBeInTheDocument();
+    expect(getByAltText('Ogremon'));
   })
 
 });
