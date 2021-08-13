@@ -1,0 +1,3 @@
+use('busines');
+
+db.restaurants.find({});
