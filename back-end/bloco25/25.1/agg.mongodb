@@ -1,0 +1,8 @@
+use('aggtest');
+db.transactions.aggregate(
+  [
+    { $match: { value: { $gt: 1000 } }},
+    { $limit: 3 },
+    { $project: { _id: 0, from: 1, to: 1, bank: 1 } }
+  ]
+);
